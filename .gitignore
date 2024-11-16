@@ -1,0 +1,10 @@
+**/obj/
+**/bin/
+**/out/
+**/*.puml
+
+*.dev.*
+*.dev
+dev.*
+
+*.user

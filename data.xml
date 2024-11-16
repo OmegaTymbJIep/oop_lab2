@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Salaries>
+	<Person>
+		<Name>
+			<FirstName>Harry</FirstName>
+			<LastName>Potter</LastName>
+		</Name>
+		<Faculty>Gryffindor</Faculty>
+		<Department>Auror Office</Department>
+		<Role>Auror</Role>
+		<Salary>3500</Salary>
+		<TimeTenure>5</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Hermione</FirstName>
+			<LastName>Granger</LastName>
+		</Name>
+		<Faculty>Gryffindor</Faculty>
+		<Department>Department of Magical Law Enforcement</Department>
+		<Role>Head of Department</Role>
+		<Salary>5000</Salary>
+		<TimeTenure>7</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Ron</FirstName>
+			<LastName>Weasley</LastName>
+		</Name>
+		<Faculty>Gryffindor</Faculty>
+		<Department>Auror Office</Department>
+		<Role>Auror</Role>
+		<Salary>3200</Salary>
+		<TimeTenure>5</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Minerva</FirstName>
+			<LastName>McGonagall</LastName>
+		</Name>
+		<Faculty>Gryffindor</Faculty>
+		<Department>School of Hogwarts</Department>
+		<Role>Professor</Role>
+		<Salary>4500</Salary>
+		<TimeTenure>40</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Severus</FirstName>
+			<LastName>Snape</LastName>
+		</Name>
+		<Faculty>Slytherin</Faculty>
+		<Department>Potions</Department>
+		<Role>Professor</Role>
+		<Salary>4200</Salary>
+		<TimeTenure>20</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Albus</FirstName>
+			<LastName>Dumbledore</LastName>
+		</Name>
+		<Faculty>Gryffindor</Faculty>
+		<Department>School of Hogwarts</Department>
+		<Role>Headmaster</Role>
+		<Salary>7000</Salary>
+		<TimeTenure>50</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Rubeus</FirstName>
+			<LastName>Hagrid</LastName>
+		</Name>
+		<Faculty>Gryffindor</Faculty>
+		<Department>Care of Magical Creatures</Department>
+		<Role>Professor</Role>
+		<Salary>2800</Salary>
+		<TimeTenure>30</TimeTenure>
+	</Person>
+
+	<Person>
+		<Name>
+			<FirstName>Filius</FirstName>
+			<LastName>Flitwick</LastName>
+		</Name>
+		<Faculty>Ravenclaw</Faculty>
+		<Department>Charms</Department>
+		<Role>Professor</Role>
+		<Salary>4000</Salary>
+		<TimeTenure>35</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Pomona</FirstName>
+			<LastName>Sprout</LastName>
+		</Name>
+		<Faculty>Hufflepuff</Faculty>
+		<Department>Herbology</Department>
+		<Role>Professor</Role>
+		<Salary>3900</Salary>
+		<TimeTenure>30</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Sybill</FirstName>
+			<LastName>Trelawney</LastName>
+		</Name>
+		<Faculty>Ravenclaw</Faculty>
+		<Department>Divination</Department>
+		<Role>Professor</Role>
+		<Salary>2800</Salary>
+		<TimeTenure>16</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Remus</FirstName>
+			<LastName>Lupin</LastName>
+		</Name>
+		<Faculty>Gryffindor</Faculty>
+		<Department>Defense Against the Dark Arts</Department>
+		<Role>Professor</Role>
+		<Salary>3500</Salary>
+		<TimeTenure>1</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Gilderoy</FirstName>
+			<LastName>Lockhart</LastName>
+		</Name>
+		<Faculty>Ravenclaw</Faculty>
+		<Department>Defense Against the Dark Arts</Department>
+		<Role>Professor</Role>
+		<Salary>3100</Salary>
+		<TimeTenure>1</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Horace</FirstName>
+			<LastName>Slughorn</LastName>
+		</Name>
+		<Faculty>Slytherin</Faculty>
+		<Department>Potions</Department>
+		<Role>Professor</Role>
+		<Salary>4200</Salary>
+		<TimeTenure>40</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Charity</FirstName>
+			<LastName>Burbage</LastName>
+		</Name>
+		<Faculty>Hogwarts</Faculty>
+		<Department>Muggle Studies</Department>
+		<Role>Professor</Role>
+		<Salary>3000</Salary>
+		<TimeTenure>10</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Aurora</FirstName>
+			<LastName>Sinstra</LastName>
+		</Name>
+		<Faculty>Hogwarts</Faculty>
+		<Department>Astronomy</Department>
+		<Role>Professor</Role>
+		<Salary>3200</Salary>
+		<TimeTenure>12</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+	<Person>
+		<Name>
+			<FirstName>Random</FirstName>
+			<LastName>Wizard</LastName>
+		</Name>
+		<Faculty>Some faculty</Faculty>
+		<Department>Some department</Department>
+		<Role>Some Role</Role>
+		<Salary>1000</Salary>
+		<TimeTenure>999</TimeTenure>
+	</Person>
+</Salaries>

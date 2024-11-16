@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GUI.MainPage"
+             BackgroundColor="#2C2A2E"
+             Padding="0">
+
+    <ScrollView>
+        <Grid ColumnDefinitions="*,Auto,Auto">
+            <ScrollView Grid.Column="0" Margin="0,0,20,0">
+                <Grid Padding="10,20,10,20">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Padding="0, 0, 10, 20"
+                        Text="Name"
+                        FontSize="20"/>
+
+                    <Label Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Padding="0, 0, 10, 20"
+                        Text="Faculty"
+                        FontSize="20"/>
+
+                    <Label Grid.Row="0"
+                        Grid.Column="2"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Padding="0, 0, 10, 20"
+                        Text="Department"
+                        FontSize="20"/>
+
+                    <Label Grid.Row="0"
+                        Grid.Column="3"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Padding="0, 0, 10, 20"
+                        Text="Role"
+                        FontSize="20"/>
+
+                    <Label Grid.Row="0"
+                        Grid.Column="4"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Padding="0, 0, 10, 20"
+                        Text="Salary"
+                        FontSize="20"/>
+
+                    <Label Grid.Row="0"
+                        Grid.Column="5"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Padding="0, 0, 10, 20"
+                        Text="Time tenure (days)"
+                        FontSize="20"/>
+
+                    <Grid x:Name="ResultGrid"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="6">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </Grid>
+            </ScrollView>
+
+            <Border Grid.Column="1"
+                    WidthRequest="2"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"
+                    BackgroundColor="Black">
+            </Border>
+
+            <Grid
+                Grid.Column="2"
+                ColumnSpacing="10"
+                RowSpacing="10"
+                Padding="10,20,10,20"
+                Margin="50,0,15,0"
+                MaximumWidthRequest="400"
+                MinimumWidthRequest="400"
+                HorizontalOptions="Center"
+                VerticalOptions="FillAndExpand">
+
+                <!-- Define the grid rows -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!-- Define the grid columns (maximum needed for a single row) -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Buttons (Open file, Export) -->
+                <Button
+                    Text="Open file..."
+                    Grid.Row="0" Grid.Column="0"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OpenButton_Clicked"
+                    FontSize="20"
+                    TextColor="White"
+                    BackgroundColor="#274853"/>
+
+                <Button
+                    Text="Export as HTML"
+                    Grid.Row="0" Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="ExportButton_Clicked"
+                    FontSize="20"
+                    TextColor="White"
+                    BackgroundColor="#274853"/>
+
+                <!-- Find, Parser Picker -->
+                <Button
+                    Text="Find"
+                    Grid.Row="1" Grid.Column="0"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="FindButton_Clicked"
+                    FontSize="20"
+                    TextColor="White"
+                    BackgroundColor="#274853"/>
+
+                <Picker
+                    x:Name="ParserPicker"
+                    Grid.Row="1" Grid.Column="1"
+                    SelectedItem="{Binding Selection}"
+                    SelectedIndexChanged="Parser_Selected"
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    FontSize="20">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>SAX</x:String>
+                            <x:String>DOM</x:String>
+                            <x:String>LINQ to XML</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <!-- Name Input (using Frame) -->
+                <Frame
+                    Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0"
+                    CornerRadius="5"
+                    Padding="10">
+
+                    <Grid ColumnDefinitions="Auto,Auto,*">
+                        <CheckBox x:Name="NameCheckbox" Grid.Column="0" VerticalOptions="Center" />
+                        <Label
+                            Text="Name"
+                            Grid.Column="1"
+                            VerticalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="Center"
+                            Margin="10,0" />
+                        <Entry
+                            x:Name="NameEntry"
+                            Grid.Column="2"
+                            Placeholder="Enter person name here"
+                            MaximumWidthRequest="180"
+                            HorizontalOptions="End" />
+                    </Grid>
+                </Frame>
+
+                <!-- Faculty Input (using Frame) -->
+                <Frame
+                    Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="0"
+                    CornerRadius="5"
+                    Padding="10">
+
+                    <Grid ColumnDefinitions="Auto,Auto,*">
+                        <CheckBox x:Name="FacultyCheckbox" Grid.Column="0" VerticalOptions="Center" />
+                        <Label
+                            Text="Faculty"
+                            Grid.Column="1"
+                            VerticalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="Center"
+                            Margin="10,0" />
+                        <Entry
+                            x:Name="FacultyEntry"
+                            Grid.Column="2"
+                            Placeholder="Enter person faculty here"
+                            MaximumWidthRequest="180"
+                            HorizontalOptions="End" />
+                    </Grid>
+                </Frame>
+
+                <!-- Department Input (using Frame) -->
+                <Frame
+                    Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="0"
+                    CornerRadius="5"
+                    Padding="10">
+
+                    <Grid ColumnDefinitions="Auto,Auto,*">
+                        <CheckBox x:Name="DepartmentCheckbox" Grid.Column="0" VerticalOptions="Center" />
+                        <Label
+                            Text="Department"
+                            Grid.Column="1"
+                            VerticalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="Center"
+                            Margin="10,0" />
+                        <Entry
+                            x:Name="DepartmentEntry"
+                            Grid.Column="2"
+                            Placeholder="Enter person department here"
+                            MaximumWidthRequest="180"
+                            HorizontalOptions="End" />
+                    </Grid>
+                </Frame>
+
+                <!-- TimeTenure Input (using Frame) -->
+                <Frame
+                    Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0"
+                    CornerRadius="5"
+                    Padding="10">
+
+                    <Grid ColumnDefinitions="Auto,Auto,*">
+                        <CheckBox x:Name="TimeTenureCheckbox" Grid.Column="0" VerticalOptions="Center" />
+                        <Label
+                            Text="TimeTenure"
+                            Grid.Column="1"
+                            VerticalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="Center"
+                            Margin="10,0" />
+                        <Entry
+                            x:Name="TimeTenureEntry"
+                            Grid.Column="2"
+                            Placeholder="Enter person time tenure (days) here"
+                            MaximumWidthRequest="180"
+                            HorizontalOptions="End" />
+                    </Grid>
+                </Frame>
+
+                <!-- Role Input (using Frame) -->
+                <Frame
+                    Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="0"
+                    CornerRadius="5"
+                    Padding="10">
+
+                    <Grid ColumnDefinitions="Auto,Auto,*">
+                        <CheckBox x:Name="RoleCheckbox" Grid.Column="0" VerticalOptions="Center" />
+                        <Label
+                            Text="Role"
+                            Grid.Column="1"
+                            VerticalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="Center"
+                            Margin="10,0" />
+                        <Entry
+                            x:Name="RoleEntry"
+                            Grid.Column="2"
+                            Placeholder="Enter person role here"
+                            MaximumWidthRequest="180"
+                            HorizontalOptions="End" />
+                    </Grid>
+                </Frame>
+
+                <!-- Salary Input (using Frame) -->
+                <Frame
+                    Grid.Row="7" Grid.ColumnSpan="2" Grid.Column="0"
+                    CornerRadius="5"
+                    Padding="10">
+
+                    <Grid ColumnDefinitions="Auto,Auto,*">
+                        <CheckBox x:Name="SalaryCheckbox" Grid.Column="0" VerticalOptions="Center" />
+                        <Label
+                            Text="Salary"
+                            Grid.Column="1"
+                            VerticalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="Center"
+                            Margin="10,0" />
+                        <Entry
+                            x:Name="SalaryEntry"
+                            Grid.Column="2"
+                            Placeholder="Enter person salary here"
+                            MaximumWidthRequest="180"
+                            HorizontalOptions="End" />
+                    </Grid>
+                </Frame>
+
+                <!-- Exit and Clear Buttons -->
+                <Button
+                    Text="Clear"
+                    Grid.Row="9" Grid.Column="0"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="ClearButton_Clicked"
+                    MaximumHeightRequest="50"
+                    FontSize="20"
+                    TextColor="White"
+                    BackgroundColor="#274853"/>
+
+                <Button
+                    Text="Exit"
+                    Grid.Row="9" Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="ExitButton_Clicked"
+                    BackgroundColor="#BB5753"
+                    TextColor="White"
+                    FontSize="20"
+                    MaximumHeightRequest="50"/>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>
+    
