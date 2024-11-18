@@ -1,9 +1,10 @@
 using System.Text;
-using XML_Manager;
 using CommunityToolkit.Maui.Storage;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Xsl;
+using XMLManager.Parser;
+using XMLManager.Person;
 
 namespace GUI;
 

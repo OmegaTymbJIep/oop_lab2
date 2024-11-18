@@ -1,12 +1,12 @@
 using System.Xml;
 
-namespace XML_Manager;
+namespace XMLManager.Parser;
 
-public class SaxParser : Parser
+public class SaxParser : FilterableParser
 {
     public SaxParser()
     {
-        People = new List<Person>();
+        People = new List<Person.Person>();
     }
 
     public override bool Load(Stream inputStream, XmlReaderSettings settings)
@@ -22,7 +22,7 @@ public class SaxParser : Parser
                     continue;
                 }
 
-                var person = new Person();
+                var person = new Person.Person();
                 SkipToText(reader);
                 person.Name.FirstName = reader.Value;
                 SkipToText(reader);

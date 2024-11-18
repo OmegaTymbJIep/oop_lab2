@@ -1,9 +1,9 @@
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace XML_Manager;
+namespace XMLManager.Parser;
 
-public class DomParser : Parser
+public class DomParser : FilterableParser
 {
     public override bool Load(Stream inputStream, XmlReaderSettings settings)
     {
@@ -21,10 +21,10 @@ public class DomParser : Parser
                 return true;
             }
 
-            var serializer = new XmlSerializer(typeof(Person));
+            var serializer = new XmlSerializer(typeof(Person.Person));
             foreach (XmlNode child in document.DocumentElement.ChildNodes)
             {
-                if (serializer.Deserialize(new StringReader(child.OuterXml)) is Person person)
+                if (serializer.Deserialize(new StringReader(child.OuterXml)) is Person.Person person)
                 {
                     People.Add(person);
                 }

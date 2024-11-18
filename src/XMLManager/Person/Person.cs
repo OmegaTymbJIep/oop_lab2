@@ -1,4 +1,4 @@
-namespace XML_Manager;
+namespace XMLManager.Person;
 
 public class Person
 {

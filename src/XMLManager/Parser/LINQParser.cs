@@ -1,9 +1,9 @@
 using System.Xml;
 using System.Xml.Linq;
 
-namespace XML_Manager;
+namespace XMLManager.Parser;
 
-public class LinqParser : Parser
+public class LinqParser : FilterableParser
 {
     public override bool Load(Stream inputStream, XmlReaderSettings settings)
     {
@@ -13,9 +13,9 @@ public class LinqParser : Parser
 
             People = XDocument.Load(reader)
                 .Descendants("Person")
-                .Select(person => new Person
+                .Select(person => new Person.Person
                 {
-                    Name = new Person.FullName
+                    Name = new Person.Person.FullName
                     {
                         FirstName = person.Element("Name")?.Element("FirstName")?.Value ?? "",
                         LastName = person.Element("Name")?.Element("LastName")?.Value ?? ""

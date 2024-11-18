@@ -1,9 +1,11 @@
 using System.Xml;
+using XMLManager.Person;
 
-namespace XML_Manager;
+namespace XMLManager.Parser;
 
 public interface IParser
 {
     public bool Load(Stream inputStream, XmlReaderSettings settings);
-    public IList<Person> Find(Filters filters);
+
+    public IList<Person.Person> Find(Filters filters);
 }
